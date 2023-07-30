@@ -1,2 +1,18 @@
 # Final-project
  Polypeptide Function and Structural Information Prediction Tool
+Tool Description:
+The Polypeptide Function and Structural Information Prediction Tool will utilize the following main software technologies to carry out its functionality:
+1)	Python for CGI Programming: Python will be used to build server-side applications and process user requests. It will be tasked with processing user inputs, initiating predictions, and interacting with protein databases.
+2)	HTML5 and HTML Templates: HTML5 will be used to build the web page structure. HTML templates will be used to segregate content and presentation, making it simpler to generate result pages dynamically.
+3)	JavaScript and jQuery for Interactivity: JavaScript and jQuery will be used to enhance user interactivity, such as expanding or collapsing sections, performing validation, and creating interactive 3D visualizations.
+4)	Bioinformatics Databases (e.g., UniProt, PDB): To access known information on proteins, established bioinformatics databases such as UniProt for functional annotations and PDB for 3D structural templates will be integrated. The application includes secondary structure databases, such as DSSP (Dictionary of Protein Secondary Structure) and STRIDE (STructural IDEntification), which comprise experimentally determined secondary structure annotations for known protein structures. By comparing the sequence of the input polypeptide to similar regions in these databases, the tool accurately predicts the secondary structure elements, such as alpha helices, beta sheets, and coils.
+5)	MySQL for Database Management: MySQL will be used to set up a database to store relevant protein information, including known secondary structure data, 3D structural information, and functional annotations.
+
+Tool Design and Development:
+1)	Database Setup: Set up a MySQL database to store known secondary structure data, and functional annotations from bioinformatics databases (e.g., UniProt, PDB, DSSP, STRIDE). Design the database schema to organize and manage the protein-related information efficiently.
+2)	GUI Design: Utilize HTML5, CSS, and JavaScript to build a visually appealing and user-friendly UI. Apply responsive design principles to ensure the tool works well on various devices and screen sizes.
+3)	Server-Side Programming: Develop Python-based server-side CGI scripts for handling user requests and processing polypeptide sequences. When predicting the function and secondary structure of polypeptides, the Python code will commonly consider the following rules and criteria:
+•	To find related proteins with known functions, the code will match the input polypeptide sequence with sequences of known proteins in databases. High sequence similarity between functionally defined proteins and the input polypeptide increases the likelihood that they will have related functions.
+•	The code examines the input polypeptide for conserved domains, motifs, or functional signatures. The presence of domains or motifs associated with known functions can provide insight into the polypeptide's function.
+•	The code will help to determine the polypeptide's secondary structure elements (alpha helices, beta sheets, and coils). The secondary structure of a protein can shed light on its overall folding pattern and potential functional regions.
+4)	Integration of Bioinformatics Databases: Incorporate established bioinformatics databases (e.g., UniProt, PDB) into the tool in order to gain access to known secondary structure data, and functional annotations. Implement API queries or data retrieval methods to retrieve pertinent database information.
